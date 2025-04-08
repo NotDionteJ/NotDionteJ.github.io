@@ -99,8 +99,8 @@
             
             var i, id;
             
-            // hud.setIntegrity(0);
-            // player.alpha = 0;
+            hud.setIntegrity(0);
+            player.alpha = 0;
             
             i = 0;
             id = setInterval(function(){
@@ -108,7 +108,7 @@
               if (i > 60) {
                   window.clearInterval(id);
                   player.explosion.stop();
-                  //space.splice(space.indexOf(player), 1);
+                  space.splice(space.indexOf(player), 1);
                   view.removeChild(player);
               }
               i++;
@@ -116,7 +116,7 @@
         }
         
         function onPlayerDamaged(e) {
-            // hud.setIntegrity(player.integrity);
+            hud.setIntegrity(player.integrity);
         }
         
         return _playerManager;
